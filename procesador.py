@@ -16,7 +16,7 @@ def encriptar(texto, metodo):
     elif metodo == "Cesar":
         return Cesar.cifrado_cesar(texto,3)
     elif metodo == "Cod_URL":
-        return "🔐 Simulación de Cod_URL (aún sin implementar)"
+        return Cod_URL.codificar_url(texto)
     elif metodo == "Rail_Fence":
         return "🔐 Simulación de Rail_Fence (aún sin implementar)"
     elif metodo == "ROT13":
@@ -32,7 +32,7 @@ def desencriptar(texto, metodo):
     elif metodo == "Cesar":
         return Cesar.descifrado_cesar(texto,3)
     elif metodo == "Cod_URL":
-        return "🔐 Simulación de Cod_URL (aún sin implementar)"
+        return Cod_URL.decodificar_url(texto)
     elif metodo == "Rail_Fence":
         return "🔐 Simulación de Rail_Fence (aún sin implementar)"
     elif metodo == "ROT13":
