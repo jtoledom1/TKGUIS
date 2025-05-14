@@ -120,7 +120,7 @@ def generar_operacion():
 # Botones
 ctk.CTkButton(right_frame, text="📂 Cargar archivo", width=300, command=open_file).pack(pady=10)
 
-encrypt_menu = ctk.CTkOptionMenu(right_frame, values=["AES", "RSA", "Atbash"], width=300)
+encrypt_menu = ctk.CTkOptionMenu(right_frame, values = ["Atbash", "Cesar", "Cod_URL", "Rail_Fence", "ROT13", "Vigenere"], width=300)
 encrypt_menu.set("Tipo de encripción")
 encrypt_menu.pack(pady=10)
 

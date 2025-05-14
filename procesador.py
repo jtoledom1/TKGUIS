@@ -14,7 +14,7 @@ def encriptar(texto, metodo):
     if metodo == "Atbash":
         return Atbash.atbash(texto)
     elif metodo == "Cesar":
-        return "🔐 Simulación de Cesar (aún sin implementar)"
+        return Cesar.cifrado_cesar(texto,3)
     elif metodo == "Cod_URL":
         return "🔐 Simulación de Cod_URL (aún sin implementar)"
     elif metodo == "Rail_Fence":
@@ -30,7 +30,7 @@ def desencriptar(texto, metodo):
     if metodo == "Atbash":
         return Atbash.atbash(texto)
     elif metodo == "Cesar":
-        return Atbash.atbash(texto)
+        return Cesar.descifrado_cesar(texto,3)
     elif metodo == "Cod_URL":
         return "🔐 Simulación de Cod_URL (aún sin implementar)"
     elif metodo == "Rail_Fence":
