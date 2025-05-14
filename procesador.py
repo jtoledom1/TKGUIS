@@ -1,0 +1,62 @@
+import hashlib
+import os
+from g1 import Atbash, Cesar, Cod_URL, Rail_Fence, ROT13, Vigenere
+
+
+def leer_archivo(ruta):
+    try:
+        with open(ruta, 'r', encoding='utf-8') as file:
+            return file.read()
+    except Exception as e:
+        return f"Error al leer archivo: {e}"
+
+def encriptar(texto, metodo):
+    if metodo == "Atbash":
+        return Atbash.atbash(texto)
+    elif metodo == "Cesar":
+        return "🔐 Simulación de Cesar (aún sin implementar)"
+    elif metodo == "Cod_URL":
+        return "🔐 Simulación de Cod_URL (aún sin implementar)"
+    elif metodo == "Rail_Fence":
+        return "🔐 Simulación de Rail_Fence (aún sin implementar)"
+    elif metodo == "ROT13":
+        return "🔐 Simulación de ROT13 (aún sin implementar)"
+    elif metodo == "Vigenere":
+        return "🔐 Simulación de Vigenere (aún sin implementar)"
+    else:
+        return "Método de encriptación no reconocido"
+
+def desencriptar(texto, metodo):
+    if metodo == "Atbash":
+        return Atbash.atbash(texto)
+    elif metodo == "Cesar":
+        return Atbash.atbash(texto)
+    elif metodo == "Cod_URL":
+        return "🔐 Simulación de Cod_URL (aún sin implementar)"
+    elif metodo == "Rail_Fence":
+        return "🔐 Simulación de Rail_Fence (aún sin implementar)"
+    elif metodo == "ROT13":
+        return "🔐 Simulación de ROT13 (aún sin implementar)"
+    elif metodo == "Vigenere":
+        return "🔐 Simulación de Vigenere (aún sin implementar)"
+    else:
+        return "Método de encriptación no reconocido"
+
+def guardar_resultado(texto, modo, metodo):
+    carpeta = "resultados"
+    os.makedirs(carpeta, exist_ok=True)
+    nombre_archivo = f"{modo.lower()}_{metodo.lower()}.txt"
+    ruta = os.path.join(carpeta, nombre_archivo)
+    with open(ruta, 'w', encoding='utf-8') as file:
+        file.write(texto)
+    return ruta
+
+def listar_resultados():
+    carpeta = "resultados"
+    if not os.path.exists(carpeta):
+        return []
+    return [f for f in os.listdir(carpeta) if f.endswith(".txt")]
+
+def leer_resultado(nombre_archivo):
+    ruta = os.path.join("resultados", nombre_archivo)
+    return leer_archivo(ruta)
