@@ -1,0 +1,19 @@
+Toledinskey/
+├── interfaz.py
+├── procesador.py
+├── resultados/
+│   └── archivoparapruebas.txt
+├── g1/
+│   ├── Atbash.py
+│   ├── Cesar.py
+│   ├── Cod_URL.py
+│   ├── ROT13.py
+│   ├── Rail_Fence.py
+│   └── Vigenere.py
+├── g2/
+│   ├── base16.py
+│   ├── base32.py
+│   ├── base64.py
+│   └── base85.py
+└── g3/
+    └── XOR.py
