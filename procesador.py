@@ -18,7 +18,7 @@ def encriptar(texto, metodo):
     elif metodo == "Cod_URL":
         return Cod_URL.codificar_url(texto)
     elif metodo == "Rail_Fence":
-        return "🔐 Simulación de Rail_Fence (aún sin implementar)"
+        return Rail_Fence.codificar_rail_fence(texto,20)
     elif metodo == "ROT13":
         return "🔐 Simulación de ROT13 (aún sin implementar)"
     elif metodo == "Vigenere":
@@ -34,7 +34,7 @@ def desencriptar(texto, metodo):
     elif metodo == "Cod_URL":
         return Cod_URL.decodificar_url(texto)
     elif metodo == "Rail_Fence":
-        return "🔐 Simulación de Rail_Fence (aún sin implementar)"
+        return Rail_Fence.decodificar_rail_fence(texto,20)
     elif metodo == "ROT13":
         return "🔐 Simulación de ROT13 (aún sin implementar)"
     elif metodo == "Vigenere":
